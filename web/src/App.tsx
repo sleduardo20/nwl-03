@@ -1,9 +1,15 @@
 import React from 'react';
+import Landing from './pages/Landing';
 
-function App() {
+import GlobalStyles from './styles/global';
+
+const App = () => {
   return (
-    <h1>World, hold on!!</h1>
+    <>
+      <Landing />
+      <GlobalStyles />
+    </>
   );
-}
+};
 
 export default App;
