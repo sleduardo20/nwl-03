@@ -23,7 +23,7 @@ export const Container = styled.div`
       margin-top: 64px;
     }
 
-    > p {
+    p {
       margin-top: 24px;
       line-height: 2.4rem;
     }

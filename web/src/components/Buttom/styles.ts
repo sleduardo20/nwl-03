@@ -1,10 +1,11 @@
 import styled from 'styled-components';
+import { motion } from 'framer-motion';
 
 interface ContainerProps {
   background?: string;
 }
 
-export const Container = styled.button<ContainerProps>`
+export const Container = styled(motion.button)<ContainerProps>`
   margin: 0;
 
   border: 0;
@@ -15,7 +16,6 @@ export const Container = styled.button<ContainerProps>`
   width: 80px;
   height: 80px;
   border-radius: 30px;
-  transition: 0.2s;
 
   display: flex;
   align-items: center;

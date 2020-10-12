@@ -3,6 +3,7 @@ import { FiPlus } from 'react-icons/fi';
 import { Map, TileLayer } from 'react-leaflet';
 import 'leaflet/dist/leaflet.css';
 
+import { motion } from 'framer-motion';
 import face from '../../assets/face.svg';
 import Buttom from '../../components/Buttom';
 
@@ -12,16 +13,24 @@ const OrphanagesMap: React.FC = () => {
   return (
     <Container>
       <aside>
-        <header>
+        <motion.header
+          initial={{ opacity: 0, y: -100 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 1 }}
+        >
           <img src={face} alt="Logo Happy" />
 
           <h2>Escolha um orfanato no mapa</h2>
           <p>Muitas crianças estam esperando sua visita.</p>
-        </header>
-        <footer>
+        </motion.header>
+        <motion.footer
+          initial={{ opacity: 0, y: 100 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 1 }}
+        >
           <strong>Blumenau</strong>
           <span>Santa Catarina</span>
-        </footer>
+        </motion.footer>
       </aside>
 
       <Map

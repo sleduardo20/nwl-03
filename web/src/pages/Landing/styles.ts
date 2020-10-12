@@ -1,3 +1,4 @@
+import { motion } from 'framer-motion';
 import styled from 'styled-components';
 
 import imgBg from '../../assets/imgLanding.svg';
@@ -31,7 +32,7 @@ export const ContentWapper = styled.div`
   }
 `;
 
-export const Main = styled.div`
+export const Main = styled(motion.div)`
   max-width: 380px;
 
   > h1 {
@@ -47,7 +48,7 @@ export const Main = styled.div`
   }
 `;
 
-export const Location = styled.div`
+export const Location = styled(motion.div)`
   position: absolute;
   right: 0;
   top: 0;
@@ -63,7 +64,3 @@ export const Location = styled.div`
     font-weight: 800;
   }
 `;
-
-// export const Button = styled.button`
-
-// `;
