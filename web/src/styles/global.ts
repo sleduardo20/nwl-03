@@ -10,9 +10,15 @@ export default createGlobalStyle`
   list-style: none;
 }
 
+button{
+  cursor: pointer;
+}
+
 body{
   color: #fff;
   background-color: #ebf2f5;
+  height: 100vh;
+  width: 100vw;
 }
 
 html{
@@ -20,7 +26,7 @@ html{
 }
 
 body,input, button, textarea{
-  font: 600 1.8rem Nonito, sans-serif;
+  font: 600 1.8rem Nunito, sans-serif;
   
 }
 
