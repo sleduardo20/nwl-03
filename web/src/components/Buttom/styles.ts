@@ -1,11 +1,16 @@
 import styled from 'styled-components';
 
-export const Container = styled.button`
+interface ContainerProps {
+  background?: string;
+}
+
+export const Container = styled.button<ContainerProps>`
   margin: 0;
 
   border: 0;
 
-  background-color: var(--yellow);
+  background-color: ${props =>
+    props.background ? props.background : 'var(--yellow)'};
   padding: 4px;
   width: 80px;
   height: 80px;
@@ -15,6 +20,10 @@ export const Container = styled.button`
   display: flex;
   align-items: center;
   justify-content: center;
+
+  a {
+    padding: 8px;
+  }
 
   &:hover {
     background-color: var(--blueligth);

@@ -7,6 +7,7 @@ import { Container } from './styles';
 type ButtomProps = ButtonHTMLAttributes<HTMLButtonElement> & {
   to: string;
   icon: React.ComponentType<IconBaseProps>;
+  background?: string;
   color?: string;
 };
 
@@ -14,15 +15,14 @@ const Buttom: React.FC<ButtomProps> = ({
   children,
   to,
   color,
+  background,
   icon: Icon,
   ...rest
 }) => {
   return (
-    <Container type="button" {...rest}>
+    <Container type="button" {...rest} background={background}>
       {children}
-      <Link to="/">
-        <Icon size={28} color={color} />
-      </Link>
+      <Link to={to}>{Icon && <Icon size={28} color={color} />}</Link>
     </Container>
   );
 };
