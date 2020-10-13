@@ -7,7 +7,6 @@ interface ContainerProps {
 
 export const Container = styled(motion.button)<ContainerProps>`
   margin: 0;
-
   border: 0;
 
   background-color: ${props =>
