@@ -23,7 +23,7 @@ export default {
       relations: ['images'],
     });
 
-    return response.json(orphanageView.render(orphanage));
+    return response.json(orphanages_view.render(orphanage));
   },
 
   async create(request: Request, response: Response) {
