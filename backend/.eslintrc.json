@@ -22,6 +22,7 @@
       "no-underscore-dangle":"off",
       "no-unused-vars": "off",
       "camelcase": "off",
+      "@typescript-eslint/explicit-module-boundary-types": "off",
       
     "class-methods-use-this":"off",
     "prettier/prettier": ["error", {
