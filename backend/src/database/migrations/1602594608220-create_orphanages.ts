@@ -20,7 +20,7 @@ export default class createOrphanages1602594608220
             type: 'varchar',
           },
           {
-            name: 'latidute',
+            name: 'latitude',
             type: 'decimal',
             scale: 10,
             precision: 2,
