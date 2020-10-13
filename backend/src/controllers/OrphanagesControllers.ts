@@ -1,14 +1,24 @@
 import { Request, Response } from 'express';
 import { getRepository } from 'typeorm';
-import Orphanages from '../models/Orphanages';
+import Orphanage from '../models/Orphanages';
 
 export default {
   async index(request: Request, response: Response) {
-    const orphanagesRepository = getRepository(Orphanages);
+    const orphanagesRepository = getRepository(Orphanage);
 
     const orphanages = await orphanagesRepository.find();
 
     return response.json(orphanages);
+  },
+
+  async show(request: Request, response: Response) {
+    const { id } = request.params;
+
+    const orphanagesRepository = getRepository(Orphanage);
+
+    const orphanage = await orphanagesRepository.findOneOrFail(id);
+
+    return response.json(orphanage);
   },
 
   async create(request: Request, response: Response) {
@@ -22,7 +32,7 @@ export default {
       open_on_weekends,
     } = request.body;
 
-    const orphanagesRepository = getRepository(Orphanages);
+    const orphanagesRepository = getRepository(Orphanage);
 
     const orphanage = orphanagesRepository.create({
       name,
