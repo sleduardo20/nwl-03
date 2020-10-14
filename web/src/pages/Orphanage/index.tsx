@@ -1,34 +1,17 @@
 import React from 'react';
 import { FaWhatsapp } from 'react-icons/fa';
-import { FiClock, FiInfo, FiArrowLeft } from 'react-icons/fi';
+import { FiClock, FiInfo } from 'react-icons/fi';
 import { Map, Marker, TileLayer } from 'react-leaflet';
-import { useHistory } from 'react-router-dom';
-import L from 'leaflet';
 
-import Buttom from 'components/Buttom';
-import mapMarkerImg from '../../assets/map-marker.svg';
+import SideBar from 'components/SideBar';
+import happyMapIcon from 'utils/mapIcon';
 
 import './styles.css';
 
-const happyMapIcon = L.icon({
-  iconUrl: mapMarkerImg,
-
-  iconSize: [58, 68],
-  iconAnchor: [29, 68],
-  popupAnchor: [0, -60],
-});
-
 const Orphanage: React.FC = () => {
   return (
-    <div id="page-orphanage">
-      <aside>
-        <img src={mapMarkerImg} alt="Happy" />
-
-        <footer>
-          <Buttom icon={FiArrowLeft} color="#fff" to="/" />
-        </footer>
-      </aside>
-
+    <div id="page-create-orphanage">
+      <SideBar />
       <main>
         <div className="orphanage-details">
           <img

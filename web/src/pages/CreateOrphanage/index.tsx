@@ -1,32 +1,17 @@
 import React from 'react';
 import { Map, Marker, TileLayer } from 'react-leaflet';
-import Leaflet from 'leaflet';
 
-import { FiArrowLeft, FiPlus } from 'react-icons/fi';
+import { FiPlus } from 'react-icons/fi';
 
-import Buttom from 'components/Buttom';
-import mapMarkerImg from '../../assets/map-marker.svg';
+import SideBar from 'components/SideBar';
+import happyMapIcon from 'utils/mapIcon';
 
 import './styles.css';
-
-const happyMapIcon = Leaflet.icon({
-  iconUrl: mapMarkerImg,
-
-  iconSize: [58, 68],
-  iconAnchor: [29, 68],
-  popupAnchor: [0, -60],
-});
 
 const CreateOrphanage: React.FC = () => {
   return (
     <div id="page-create-orphanage">
-      <aside>
-        <img src={mapMarkerImg} alt="Happy" />
-
-        <footer>
-          <Buttom icon={FiArrowLeft} color="#fff" to="/" />
-        </footer>
-      </aside>
+      <SideBar />
 
       <main>
         <form className="create-orphanage-form">
