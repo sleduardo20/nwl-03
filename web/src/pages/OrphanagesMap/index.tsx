@@ -65,7 +65,13 @@ const OrphanagesMap: React.FC = () => {
         </Marker>
       </Map>
 
-      <Buttom to="/" icon={FiPlus} color="#fff" background="#15c3d6" />
+      <Buttom
+        to="/"
+        icon={FiPlus}
+        color="#fff"
+        background="#15c3d6"
+        size="medium"
+      />
     </Container>
   );
 };

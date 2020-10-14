@@ -44,7 +44,12 @@ const Landing: React.FC = () => {
           <span>Santa Catarina</span>
         </Location>
 
-        <Button to="/map" icon={FiArrowRight} color="rgba(0,0,0,0.6)" />
+        <Button
+          to="/map"
+          icon={FiArrowRight}
+          color="rgba(0,0,0,0.6)"
+          size="medium"
+        />
       </ContentWapper>
     </Container>
   );

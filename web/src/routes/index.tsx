@@ -1,3 +1,4 @@
+import CreateOrphanage from 'pages/CreateOrphanage';
 import React from 'react';
 import { BrowserRouter, Switch, Route } from 'react-router-dom';
 import Landing from '../pages/Landing';
@@ -9,6 +10,7 @@ const Routes: React.FC = () => {
       <Switch>
         <Route path="/" exact component={Landing} />
         <Route path="/map" component={OrphanagesMap} />
+        <Route path="/create" component={CreateOrphanage} />
       </Switch>
     </BrowserRouter>
   );

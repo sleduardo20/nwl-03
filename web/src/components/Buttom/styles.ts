@@ -1,20 +1,32 @@
-import styled from 'styled-components';
+import styled, { css } from 'styled-components';
 import { motion } from 'framer-motion';
 
 interface ContainerProps {
   background?: string;
+  size?: 'normal' | 'medium';
 }
+
+const sizeVariations = {
+  normal: css`
+    width: 48px;
+    height: 48px;
+  `,
+  medium: css`
+    width: 68px;
+    height: 68px;
+  `,
+};
 
 export const Container = styled(motion.button)<ContainerProps>`
   margin: 0;
   border: 0;
+  padding: 4px;
+  border-radius: 16px;
 
   background-color: ${props =>
     props.background ? props.background : 'var(--yellow)'};
-  padding: 4px;
-  width: 80px;
-  height: 80px;
-  border-radius: 30px;
+
+  ${props => sizeVariations[props.size || 'normal']};
 
   display: flex;
   align-items: center;

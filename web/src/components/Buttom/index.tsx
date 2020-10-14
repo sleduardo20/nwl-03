@@ -9,6 +9,7 @@ type ButtomProps = MotionProps & {
   to: string;
   icon: React.ComponentType<IconBaseProps>;
   background?: string;
+  size?: 'normal' | 'medium';
   color?: string;
 };
 
@@ -17,6 +18,7 @@ const Buttom: React.FC<ButtomProps> = ({
   to,
   color,
   background,
+  size,
   icon: Icon,
   ...rest
 }) => {
@@ -27,6 +29,7 @@ const Buttom: React.FC<ButtomProps> = ({
       whileHover={{ scale: 1.1 }}
       whileTap={{ scale: 0.9 }}
       background={background}
+      size={size}
     >
       {children}
       <Link to={to}>{Icon && <Icon size={28} color={color} />}</Link>
