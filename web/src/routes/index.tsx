@@ -11,8 +11,8 @@ const Routes: React.FC = () => {
       <Switch>
         <Route path="/" exact component={Landing} />
         <Route path="/map" component={OrphanagesMap} />
-        <Route path="/create" component={CreateOrphanage} />
-        <Route path="/orphanage" component={Orphanage} />
+        <Route path="/orphanages/create" component={CreateOrphanage} />
+        <Route path="/orphanages/:id" component={Orphanage} />
       </Switch>
     </BrowserRouter>
   );

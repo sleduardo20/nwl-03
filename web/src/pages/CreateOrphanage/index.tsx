@@ -24,7 +24,7 @@ const CreateOrphanage: React.FC = () => {
         <img src={mapMarkerImg} alt="Happy" />
 
         <footer>
-          <Buttom icon={FiArrowLeft} to="/" />
+          <Buttom icon={FiArrowLeft} color="#fff" to="/" />
         </footer>
       </aside>
 

@@ -58,7 +58,7 @@ const OrphanagesMap: React.FC = () => {
             className="map-popup"
           >
             Lar dos canecos
-            <Link to="/">
+            <Link to="/orphanages/1">
               <FiArrowRight size={20} color="#fff" />
             </Link>
           </Popup>
@@ -66,7 +66,7 @@ const OrphanagesMap: React.FC = () => {
       </Map>
 
       <Buttom
-        to="/"
+        to="/orphanages/create"
         icon={FiPlus}
         color="#fff"
         background="#15c3d6"
