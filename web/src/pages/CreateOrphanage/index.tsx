@@ -3,8 +3,8 @@ import { Map, Marker, TileLayer } from 'react-leaflet';
 
 import { FiPlus } from 'react-icons/fi';
 
-import SideBar from 'components/SideBar';
 import happyMapIcon from 'utils/mapIcon';
+import SideBar from '../../components/SlideBar';
 
 import './styles.css';
 

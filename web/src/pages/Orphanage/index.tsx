@@ -3,8 +3,8 @@ import { FaWhatsapp } from 'react-icons/fa';
 import { FiClock, FiInfo } from 'react-icons/fi';
 import { Map, Marker, TileLayer } from 'react-leaflet';
 
-import SideBar from 'components/SideBar';
 import happyMapIcon from 'utils/mapIcon';
+import SideBar from '../../components/SlideBar';
 
 import './styles.css';
 
