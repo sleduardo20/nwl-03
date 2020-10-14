@@ -1,6 +1,12 @@
+
+
 <p align="center">
   <a href="" rel="noopener">
- <img width=800px height=500px src="https://github.com/sleduardo20/weather/blob/master/src/assets/img/03.png" alt="Project logo"></a>
+  
+ <img width=250px height=500px style="-webkit-user-select: none;margin: auto;" src="https://raw.githubusercontent.com/sleduardo20/nwl-03/master/img/mobile01.png">
+ <img width=250px height=500px style="-webkit-user-select: none;margin: auto;" src="https://raw.githubusercontent.com/sleduardo20/nwl-03/master/img/mobile02.png">
+ <img style="-webkit-user-select: none;margin: auto;cursor: zoom-out;" src="https://raw.githubusercontent.com/sleduardo20/nwl-03/master/img/web01.png" width="524" height="316">
+    <img style="-webkit-user-select: none;margin: auto;cursor: zoom-in;" src="https://raw.githubusercontent.com/sleduardo20/nwl-03/master/img/web02.png" width="524" height="316">
 </p>
 
 <h3 align="center">NWL-03 PROJETO HAPPY</h3>
