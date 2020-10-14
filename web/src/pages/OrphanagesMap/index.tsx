@@ -23,12 +23,27 @@ interface OrphanagesProps {
 
 const OrphanagesMap: React.FC = () => {
   const [orphanages, setOrphanages] = useState<OrphanagesProps[]>([]);
+  const [positionCurrent, setPositionCurrent] = useState({
+    latitude: 0,
+    longitude: 0,
+  });
 
   useEffect(() => {
     api.get('/orphanages').then(response => {
       setOrphanages(response.data);
     });
   }, []);
+
+  useEffect(() => {
+    if (navigator.geolocation) {
+      navigator.geolocation.getCurrentPosition(currentPosition => {
+        setPositionCurrent({
+          latitude: currentPosition.coords.latitude,
+          longitude: currentPosition.coords.longitude,
+        });
+      });
+    }
+  }, [positionCurrent]);
 
   return (
     <Container>
@@ -54,7 +69,7 @@ const OrphanagesMap: React.FC = () => {
       </aside>
 
       <Map
-        center={[-26.8750594, -49.0716105]}
+        center={[positionCurrent.latitude, positionCurrent.longitude]}
         zoom={15}
         style={{ width: '100%', height: '100%' }}
       >

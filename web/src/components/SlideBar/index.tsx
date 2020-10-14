@@ -12,7 +12,7 @@ const SlideBar: React.FC = () => {
       <img src={mapMarkerImg} alt="Happy" />
 
       <footer>
-        <Buttom icon={FiArrowLeft} color="#fff" to="/" />
+        <Buttom icon={FiArrowLeft} color="#fff" to="/map" />
       </footer>
     </aside>
   );
