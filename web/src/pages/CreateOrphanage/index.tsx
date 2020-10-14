@@ -9,6 +9,7 @@ import { useHistory } from 'react-router-dom';
 import { Map, Marker, TileLayer } from 'react-leaflet';
 import { LeafletMouseEvent } from 'leaflet';
 import { FiPlus } from 'react-icons/fi';
+import { motion } from 'framer-motion';
 
 import api from 'services/api';
 
@@ -77,7 +78,7 @@ const CreateOrphanage: React.FC = () => {
 
         alert('Cadastro realizado com sucesso');
 
-        history.push('/');
+        history.push('/map');
       } catch (error) {
         alert('Ocorreu algum erro no cadastro, tente novamente!');
       }
@@ -118,7 +119,13 @@ const CreateOrphanage: React.FC = () => {
       <SideBar />
 
       <main>
-        <form onSubmit={handleSubmit} className="create-orphanage-form">
+        <motion.form
+          onSubmit={handleSubmit}
+          className="create-orphanage-form"
+          initial={{ opacity: 0, y: -100 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 1 }}
+        >
           <fieldset>
             <legend>Dados</legend>
 
@@ -224,7 +231,7 @@ const CreateOrphanage: React.FC = () => {
           <button className="confirm-button" type="submit">
             Confirmar
           </button>
-        </form>
+        </motion.form>
       </main>
     </div>
   );

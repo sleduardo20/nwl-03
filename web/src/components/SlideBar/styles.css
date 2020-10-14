@@ -14,3 +14,7 @@
 #page-orphanage aside img {
   width: 48px;
 }
+
+#page-orphanage aside a {
+  padding: 8px;
+}
