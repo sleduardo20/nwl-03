@@ -53,6 +53,7 @@ yarn start
 - [React Native](https://reactnative.dev/docs/getting-started) - Mobile
 - [Expo](https://docs.expo.io/) - Framawork e plataforma universal para aplicações em React Native
 - [Styled-Components](https://styled-components.com/docs) - Estilização de Componentes
+- [Framer-Motion](framer.com/api/motion/examples/) - Animações dos Componentes
 - [Typescript](https://www.typescriptlang.org/docs) - Tipagens
 
 
