@@ -3,7 +3,7 @@ import { Dimensions, StyleSheet, Text, TouchableOpacity, View } from 'react-nati
 import MapView, { Callout, Marker, PROVIDER_GOOGLE } from 'react-native-maps';
 import {Feather} from '@expo/vector-icons';
 
-import mapMarker from './src/images/marker.png'
+import mapMarker from '../images/marker.png'
 import { useNavigation } from '@react-navigation/native';
 
 
@@ -70,7 +70,7 @@ flex: 1,
 
 map:{
 width: Dimensions.get('window').width,
-height: Dimensions.get('window').width,
+height: Dimensions.get('window').height,
 },
 
 calloutContainer:{
