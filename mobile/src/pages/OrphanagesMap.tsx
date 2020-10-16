@@ -35,8 +35,6 @@ const OrphanagesMap: React.FC = () => {
     navigation.navigate('SelectMapPosition')
   },[])
 
-  console.log(orphanages)
-
   return   (  
       <View style={styles.container}>
           
