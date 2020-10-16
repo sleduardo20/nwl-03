@@ -17,7 +17,7 @@ const Heacker: React.FC<HeaderProps> = ({title, showCancel=true}) => {
   },[])
   
   return (
-      <View style={styles.container}>
+  <View style={styles.container}>
     <BorderlessButton onPress={navigation.goBack}>
       <Feather name='arrow-left' size={24} color='#15b6d6' />
     </BorderlessButton>
@@ -25,15 +25,14 @@ const Heacker: React.FC<HeaderProps> = ({title, showCancel=true}) => {
         {title}
     </Text>
 
-   {showCancel ? (
-      <BorderlessButton onPress={handleGoBackToAppHomePage}>
-      <Feather name='x' size={24} color='#ff669d'  />
-    </BorderlessButton>
-   ) : (
-   
-    <View/>
-    )
-  }
+    {showCancel ? (
+        <BorderlessButton onPress={handleGoBackToAppHomePage}>
+        <Feather name='x' size={24} color='#ff669d'  />
+      </BorderlessButton>
+    ) 
+    : (<View/>)
+    }
+
   </View>
   )
 }
